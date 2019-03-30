@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   ReactiveCocoa and RxSwift extensions exist as well. Instructions for installation
   are in [the README](https://github.com/Moya/Moya).
   EOS
-  s.homepage     = "https://github.com/Moya/Moya"
+  s.homepage     = "https://github.com/dntzee/Moya"
   s.license      = { :type => "MIT", :file => "License.md" }
   s.author             = { "Ash Furrow" => "ash@ashfurrow.com" }
   s.social_media_url   = "http://twitter.com/ashfurrow"
@@ -17,12 +17,12 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.11'
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
-  s.source       = { :git => "https://github.com/Moya/Moya.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/dntzee/Moya.git", :tag => s.version }
   s.default_subspec = "Core"
 
   s.subspec "Core" do |ss|
     ss.source_files  = "Source/*.swift", "Source/Plugins/*swift"
-    ss.dependency "Alamofire", "~> 4.0.0"
+    ss.dependency "Alamofire", "~> 4.8.2"
     ss.dependency "Result"
     ss.framework  = "Foundation"
   end
@@ -36,6 +36,6 @@ Pod::Spec.new do |s|
   s.subspec "RxSwift" do |ss|
     ss.source_files = "Source/RxSwift/*.swift"
     ss.dependency "Moya/Core"
-    ss.dependency "RxSwift", "3.0.0-beta.1"
+    ss.dependency "RxSwift", "~> 3.0.0"
   end
 end
